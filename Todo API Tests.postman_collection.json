@@ -1,0 +1,55 @@
+{
+	"info": {
+		"_postman_id": "83707968-f17e-4179-b260-c4952e16761b",
+		"name": "Todo API Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "12682563"
+	},
+	"item": [
+		{
+			"name": "Toggle Important",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "http://localhost:8080/api/items/1ee40aa7-34e1-4c96-9c3d-e9ea436114fb/important"
+			},
+			"response": []
+		},
+		{
+			"name": "Create List",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"brunotest\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/lists"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Todo Item",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\": \"testFirstTodo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/lists/62f54210-4d73-497e-af39-ee2c015292c5/items"
+			},
+			"response": []
+		}
+	]
+}
