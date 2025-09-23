@@ -290,14 +290,6 @@
                     <div class="item-text" th:text="${item.text}">Item Text</div>
                 </div>
                 <div class="item-actions">
-                    <form method="post" style="display: inline;" th:action="@{/api/items/{id}/important(id=${item.id})}">
-                        <input name="_method" type="hidden" value="patch"/>
-                        <button class="btn-sm btn-toggle" th:classappend="${item.important} ? 'important' : ''"
-                                th:text="${item.important} ? 'Make important' : 'Disable important'"
-                                type="submit">
-                            Important
-                        </button>
-                    </form>
                     <form method="post" style="display: inline;" th:action="@{/api/items/{id}/toggle(id=${item.id})}">
                         <input name="_method" type="hidden" value="patch"/>
                         <button class="btn-sm btn-toggle" th:classappend="${item.completed} ? 'completed' : ''"
